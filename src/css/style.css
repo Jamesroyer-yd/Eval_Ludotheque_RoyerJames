@@ -42,6 +42,10 @@ td {
     color: red;
 }
 
+.succes {
+    color: green;
+}
+
 form {
     display: flex;
     flex-direction: column;
