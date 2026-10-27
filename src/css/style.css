@@ -27,3 +27,14 @@ nav a {
 main {
     padding: 20px;
 }
+
+.erreur {
+    color: red;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 5px;
+}

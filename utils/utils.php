@@ -8,7 +8,10 @@ function connexionBdd()
 }
 
 // Nettoie une donnée reçue d'un formulaire
+// J'enlève les espaces et les balises (ce n'est pas une protection XSS)
+// Je n'utilise pas htmlspecialchars ici pour garder les apostrophes en base
+// Je protège du XSS à l'affichage et du SQL avec prepare()
 function nettoyer($donnee)
 {
-    return htmlspecialchars(strip_tags(trim($donnee)), ENT_QUOTES, 'UTF-8');
+    return strip_tags(trim($donnee));
 }
